@@ -10,7 +10,7 @@ nombre:"",
 imagen:"",
 stock:0,
 precio:0,
-url:'http://promero.pythonanywhere.com/productos/'+id,
+url:'https://ec33.pythonanywhere.com/productos/'+id,
 }
 },
 methods: {
