@@ -19,11 +19,17 @@ class Producto(db.Model):   # la clase Producto hereda de db.Model
     nombre=db.Column(db.String(100))
     precio=db.Column(db.Integer)
     stock=db.Column(db.Integer)
+    color=db.Column(db.String(100))
+    temporada=db.Column(db.String(100))
+    talle=db.Column(db.Integer)
     imagen=db.Column(db.String(400))
-    def __init__(self,nombre,precio,stock,imagen):   #crea el  constructor de la clase
+    def __init__(self,nombre,precio,stock,color,temporada,talle,imagen):   #crea el  constructor de la clase
         self.nombre=nombre   # no hace falta el id porque lo crea sola mysql por ser auto_incremento
         self.precio=precio
         self.stock=stock
+        self.color=color
+        self.temporada=temporada
+        self.talle=talle
         self.imagen=imagen
 
 
@@ -35,7 +41,7 @@ with app.app_context():
 #  ************************************************************
 class ProductoSchema(ma.Schema):
     class Meta:
-        fields=('id','nombre','precio','stock','imagen')
+        fields=('id','nombre','precio','stock','color','temporada','talle','imagen')
 
 
 producto_schema=ProductoSchema()            # El objeto producto_schema es para traer un producto
@@ -70,8 +76,11 @@ def create_producto():
     nombre=request.json['nombre']
     precio=request.json['precio']
     stock=request.json['stock']
+    color=request.json['color']
+    temporada=request.json['temporada']
+    talle=request.json['talle']
     imagen=request.json['imagen']
-    new_producto=Producto(nombre,precio,stock,imagen)
+    new_producto=Producto(nombre,precio,stock,color, temporada, talle,imagen)
     db.session.add(new_producto)
     db.session.commit()
     return producto_schema.jsonify(new_producto)
@@ -83,6 +92,9 @@ def update_producto(id):
     producto.nombre=request.json['nombre']
     producto.precio=request.json['precio']
     producto.stock=request.json['stock']
+    producto.color=request.json['color']
+    producto.temporada=request.json['temporada']
+    producto.talle=request.json['talle']
     producto.imagen=request.json['imagen']
 
     db.session.commit()
