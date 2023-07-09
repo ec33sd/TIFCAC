@@ -35,20 +35,7 @@ body {
     background-color: floralwhite;
 }
 
-Button-Nuevo{
-    font-weight: bold;
-    font-style: italic;
-    background-color: rgb(240, 236, 232);
-    color: rgb(195, 79, 8);
-    margin-top: 10px;
-}
-Button-Grabar{
-    font-weight: bold;
-    font-style: italic;
-    background-color: rgb(240, 236, 232);
-    color: rgb(195, 79, 8);
-    margin-top: 10px;
-}
+
 
 
 
