@@ -1,0 +1,54 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: rgb(241, 158, 138);
+    color: rgb(239, 102, 10);
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+ background-color:rgb(241, 158, 138) (241, 158, 138);
+  color: rgb(239, 102, 10);
+}
+
+
+Button-Ingresar{
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgb(240, 236, 232);
+    color: rgb(195, 79, 8);
+    margin-top: 10px;
+}
+
+Button-Nuevo{
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgb(240, 236, 232);
+    color: rgb(195, 79, 8);
+    margin-top: 10px;
+}
+Button-Grabar{
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgb(240, 236, 232);
+    color: rgb(195, 79, 8);
+    margin-top: 10px;
+}
+
+para cambiar el color de los botones al presionarlos
+.validation{
+    display:none;
+    color: yellow;
+    margin-left: 0.5rem;
+}
+
+para fijar el color de la tabla y si quieren cambiar la letra   
+.div class="table-responsive"{  
+    font-family:   
+    font-style: italic;
+    background-color: rgb(240, 236, 232);
+     
+} 
+
+
