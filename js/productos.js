@@ -11,9 +11,12 @@ cargando:true,
 /*atributos para el guardar los valores del formulario */
 id:0,
 nombre:"",
-imagen:"",
-stock:0,
 precio:0,
+stock:0,
+color:"",
+temporada:"",
+talle:0,
+imagen:"",
 }
 },
 methods: {
@@ -43,8 +46,11 @@ location.reload();
 grabar(){
 let producto = {
 nombre:this.nombre,
-precio: this.precio,
-stock: this.stock,
+precio:this.precio,
+stock:this.stock,
+color:this.color,
+temporada:this.temporada,
+talle:this.talle,
 imagen:this.imagen
 }
 var options = {
