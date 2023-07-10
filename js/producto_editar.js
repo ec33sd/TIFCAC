@@ -7,9 +7,12 @@ data() {
 return {
 id:0,
 nombre:"",
-imagen:"",
-stock:0,
 precio:0,
+stock:0,
+color:"",
+temporada:"",
+talle:0,
+imagen:"",
 url:'https://ec33.pythonanywhere.com/productos/'+id,
 }
 },
@@ -21,10 +24,13 @@ fetch(url)
 
 console.log(data)
 this.id=data.id
-this.nombre = data.nombre;
-this.imagen=data.imagen
-this.stock=data.stock
+this.nombre=data.nombre
 this.precio=data.precio
+this.stock=data.stock
+this.color=data.color
+this.temporada=data.temporada
+this.talle=data.talle
+this.imagen=data.imagen
 })
 .catch(err => {
 console.error(err);
@@ -34,8 +40,11 @@ this.error=true
 modificar() {
 let producto = {
 nombre:this.nombre,
-precio: this.precio,
-stock: this.stock,
+precio:this.precio,
+stock:this.stock,
+color:this.color,
+temporada:this.temporada,
+talle:this.talle,
 imagen:this.imagen
 }
 var options = {
